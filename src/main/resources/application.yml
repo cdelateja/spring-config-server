@@ -1,0 +1,25 @@
+#Port where our config server will be expose
+server:
+  port: 8888
+
+spring:
+  application:
+    name: spirng-config-server
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: true
+        #This is for GIT Configuration server in order to run as GIT server
+        git:
+          #This is the GIT repository where all our config file are, always go to external GIT, change this for a GIT repository that contains configuration files
+          uri: https://github.com/cdelateja/spring-config-templates.git
+          #Username to sign in to GIT
+          username: cdelateja
+          #Password to sign in to GIT
+          password:
+          #If our repository have multiple directories specify which one to use, change this for directory names to search configuration files
+          searchPaths:
+            - cdelateja/security
+          defaultLabel: main
+      #end
