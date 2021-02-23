@@ -21,5 +21,6 @@ spring:
           #If our repository have multiple directories specify which one to use, change this for directory names to search configuration files
           searchPaths:
             - cdelateja/security
+            - cdelateja/angularLib
           defaultLabel: main
       #end
